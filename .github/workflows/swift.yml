@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: swift build -v
+      run: xcodebuild -scheme CoreDataDemo test -destination "platform=iOS Simulator,name=iPhone 13"
     - name: SOMETHING
       run: echo "SANYA PRIVET"
