@@ -11,9 +11,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-
-
+    - name: SOMETHING
+      run: | 
+        pod reintegrate
+        pod install
     - name: Build
       run: xcodebuild -workspace CoreDataDemo.xcworkspace -scheme CoreDataDemo test -destination "platform=iOS Simulator,name=iPhone 13"
     - name: SOMETHING
