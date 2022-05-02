@@ -11,11 +11,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: PODS
-      run: pod install
-    - name: OPEN WORKSPACE 
-      run: open CoreDataDemo.xcworkspace
+
+
+
     - name: Build
-      run: xcodebuild -scheme CoreDataDemo test -destination "platform=iOS Simulator,name=iPhone 13"
+      run: xcodebuild -workspace CoreDataDemo.xcworkspace -scheme CoreDataDemo test -destination "platform=iOS Simulator,name=iPhone 13"
     - name: SOMETHING
       run: echo "SANYA PRIVET"
