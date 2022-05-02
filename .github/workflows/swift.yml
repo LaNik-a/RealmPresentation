@@ -11,6 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: PODS
+      run: pod install
     - name: Build
       run: xcodebuild -scheme CoreDataDemo test -destination "platform=iOS Simulator,name=iPhone 13"
     - name: SOMETHING
